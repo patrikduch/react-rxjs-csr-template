@@ -1,6 +1,6 @@
 {
-  "name": "my-app",
-  "version": "0.1.0",
+  "name": "react-rxjs-csr-template",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -10,9 +10,16 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-redux": "^7.1.9",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^5.0.3",
     "react-scripts": "3.4.1",
+    "reactstrap": "^8.4.1",
+    "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-observable": "^0.13.0",
+    "rxjs": "^5.2.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -35,5 +42,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/reactstrap": "^8.4.2",
+    "bootstrap": "^4.5.0"
   }
 }
