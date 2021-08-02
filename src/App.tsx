@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
-import "./App.css";
-import { PingTestContainer } from "./redux/containers/PingTest-Container";
+import './App.css';
+import { PingTestContainer } from '@redux/pingpong/Ping-Test-Container';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className='App'>
+      <header className='App-header'>
         <PingTestContainer />
       </header>
     </div>
