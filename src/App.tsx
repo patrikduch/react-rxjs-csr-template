@@ -1,13 +1,13 @@
+import PingTest from '@components/Pingtest';
 import React from 'react';
 
 import './App.css';
-import { PingTestContainer } from '@redux/pingpong/Ping-Test-Container';
 
 function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <PingTestContainer />
+        <PingTest/>
       </header>
     </div>
   );

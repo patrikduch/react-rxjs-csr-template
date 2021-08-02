@@ -1,36 +1,32 @@
+import { pingAction } from "@redux/pingpong/ping-pong-actions";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Button, Row, Container, Col } from "reactstrap";
 
 /**
- * @interface IProps => Component`s props interface.
+ * @function PingTest Testing pinging component that uses Redux store as a data source.
  */
-interface IProps {
-  isPinging: boolean;
-  pingAction(): void;
-}
+const PingTest: React.FC= () => {
+  
+  const isPinging = useSelector((state: { isPinging: boolean }) => state.isPinging);
+  const dispatch = useDispatch();
 
-const PingTest: React.FC<IProps> = ({ isPinging, pingAction }) => {
-  const switchState = () => {
-    pingAction();
-  };
   return (
-    <>
-      <Container>
-        <Row>
-          <Col>
-            <p>Stav: {isPinging ? "Zapnuto" : "Vypnuto"}</p>
-          </Col>
-        </Row>
+    <Container>
+      <Row>
+        <Col>
+          <p>Stav: {isPinging ? "Zapnuto" : "Vypnuto"}</p>
+        </Col>
+      </Row>
 
-        <Row>
-          <Col>
-            <Button size="lg" onClick={switchState}>
-              Přepnout
-            </Button>
-          </Col>
-        </Row>
-      </Container>
-    </>
+      <Row>
+        <Col>
+          <Button size="lg" onClick={() => dispatch(pingAction())}>
+            Přepnout
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
