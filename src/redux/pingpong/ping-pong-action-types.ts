@@ -13,5 +13,4 @@ export interface IPingAction {
  */
 export interface IPongAction {
   type: typeof PONG_ACTION,
-  payload?: number
 }
