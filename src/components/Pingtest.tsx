@@ -22,14 +22,14 @@ const PingTest: React.FC = () => {
     <Container>
       <Row>
         <Col>
-          <p>Stav: {isPinging ? "Zapnuto" : "Vypnuto"}</p>
+          <p>State: {isPinging ? "On" : "Off"}</p>
         </Col>
       </Row>
 
       <Row>
         <Col>
           <Button size="lg" onClick={() => dispatch(pingAction())}>
-            Přepnout
+            Toggle
           </Button>
         </Col>
       </Row>
