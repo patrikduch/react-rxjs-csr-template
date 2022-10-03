@@ -1,15 +1,26 @@
-import PingTest from '@components/Pingtest';
+import HeaderContainer from '@components/skeleton/Header-Container';
 import React from 'react';
-
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import HomePage from './pages/Home-Page';
+import TestPage from './pages/Test-Page';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <PingTest/>
-      </header>
-    </div>
+    <>
+      <HeaderContainer/>
+      <Routes>
+          <Route path="/" element={
+              <HomePage />    
+          }> 
+        </Route>
+
+        <Route path="/test" element={
+              <TestPage />  
+          }>            
+        </Route>
+      </Routes>
+    </>
   );
 }
 

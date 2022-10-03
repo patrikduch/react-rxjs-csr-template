@@ -5,7 +5,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import { pingEpic } from '@redux/pingpong/ping-pong-epics';
 
 // Bundling Epics
-const rootEpic = combineEpics<any>(
+const rootEpic = combineEpics(
   pingEpic
 );
 

@@ -632,7 +632,7 @@ state the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
     react-rxjs-csr-template 1.0 - React-redux basic template with redux-observable middleware. 
-    Copyright (C) 2021  Patrik Duch, IČ: 09225471
+    Copyright (C) Patrik Duch, IČ: 09225471
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
