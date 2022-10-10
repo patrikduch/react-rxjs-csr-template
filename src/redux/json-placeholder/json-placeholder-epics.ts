@@ -15,7 +15,7 @@ const fetchTodosEpic: Epic<Actions, ISaveTodosAction | IFailedSaveTodosAction> =
       ofType(FETCH_TODOS_ACTION),
       mergeMap(() =>
       from(
-        axios.get<FetchTodosResponse>("https://jsonplaceholder.typicode.com/todosa")
+        axios.get<FetchTodosResponse>("https://jsonplaceholder.typicode.com/todos")
       )
       .pipe(
           map((response) =>  {
