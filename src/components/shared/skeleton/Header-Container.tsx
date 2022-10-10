@@ -1,4 +1,4 @@
-import UrlLink from '@components/common/Links/Url-Link';
+import UrlLink from '@components/shared/common/Links/Url-Link';
 import { Box, AppBar, Toolbar, IconButton, Typography, Button } from '@mui/material';
 import React from 'react';
 
@@ -25,6 +25,7 @@ const HeaderContainer: React.FC = () => {
                         <UrlLink url='/' label='React Rxjs CSR Template' />
                     </Typography>
                     <Button color="inherit"><UrlLink url='/test' label='Test page' /></Button>
+                    <Button color="inherit"><UrlLink url='/json-placeholder' label='JsonPlaceholder page' /></Button>
             </Toolbar>
         </AppBar>
       </Box>

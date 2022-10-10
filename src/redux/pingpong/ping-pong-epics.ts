@@ -5,6 +5,7 @@ import { pongAction } from './ping-pong-actions';
 
 /**
  * @type Actions Type annotation for pipeable action of pingEpic.
+ * @author Patrik Duch
  */
 type Actions = IPingAction | IPongAction;
 
@@ -12,11 +13,14 @@ type Actions = IPingAction | IPongAction;
  * @function pingEpic Epic for interception ping redux action.
  * @param action$ Interception pipeable redux action.
  */
-const pingEpic: Epic<Actions, IPongAction> = (action$) =>
-  action$.pipe(
+const pingEpic: Epic<Actions, IPongAction> = (action$) => {
+
+  debugger;
+
+  return action$.pipe(
     ofType(PING_ACTION),
     delay(1000),
-    map(() => pongAction())
-);
+    map(() => pongAction()));
+}
 
 export { pingEpic };
